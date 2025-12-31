@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RektNet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Logo -->
+            <div class="logo-wrapper">
+                <h1 class="logo">
+                    Rekt<span class="logo-accent">Net</span>
+                </h1>
+            </div>
+
+            <!-- Search Bar -->
+            <form id="searchForm" class="search hero-search">
+                <div class="search-container">
+                    <input 
+                        id="searchInput" 
+                        type="search" 
+                        placeholder="Search the web..." 
+                        aria-label="Search"
+                        autocomplete="off"
+                    />
+                    <div id="searchShortcuts" class="search-shortcuts-popup" style="display: none;">
+                        <div class="shortcut-item" data-shortcut="!g">
+                            <code>!g</code> <span>Google</span>
+                        </div>
+                        <div class="shortcut-item" data-shortcut="!i">
+                            <code>!i</code> <span>Images</span>
+                        </div>
+                        <div class="shortcut-item" data-shortcut="!m">
+                            <code>!m</code> <span>IMDb</span>
+                        </div>
+                        <div class="shortcut-item" data-shortcut="!u">
+                            <code>!u</code> <span>Urban Dictionary</span>
+                        </div>
+                        <div class="shortcut-item" data-shortcut="!w">
+                            <code>!w</code> <span>Wikipedia</span>
+                        </div>
+                        <div class="shortcut-item" data-shortcut="!y">
+                            <code>!y</code> <span>YouTube</span>
+                        </div>
+                    </div>
+                </div>
+                <select id="searchEngine" aria-label="Search engine">
+                    <option value="https://duckduckgo.com/?q=" selected>DuckDuckGo</option>
+                    <option value="https://www.google.com/search?q=">Google</option>
+                    <option value="https://www.startpage.com/do/dsearch?query=">Startpage</option>
+                    <option value="https://www.youtube.com/results?search_query=">YouTube</option>
+                </select>
+            </form>
+            
+            <!-- Quick Links with Dropdowns -->
+            <div class="quick-links-container">
+                <div class="quick-links" id="quickLinks">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Quick Access Cards -->
+            <div class="cards-section">
+                <div class="cards-grid" id="cardsGrid">
+                    <!-- Cards populated by JS -->
+                </div>
+            </div>
+
+            <!-- Search Results -->
+            <div class="results-panel" id="resultsPanel">
+                <div class="results-header">
+                    <h3>Search Results</h3>
+                    <button class="results-close" id="closeResults">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="results-list" id="resultsList"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
