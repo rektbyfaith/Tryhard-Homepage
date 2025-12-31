@@ -21,7 +21,7 @@ A clean, Google-like search engine interface designed for personal network use w
 1. Clone the repository:
 ```bash
 git clone https://github.com/rektbyfaith/Tryhard-Homepage.git
-cd rektnet
+cd Tryhard-Homepage
 ```
 
 2. Install dependencies:
